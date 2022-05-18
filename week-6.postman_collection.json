@@ -1,0 +1,371 @@
+{
+	"info": {
+		"_postman_id": "5e5361e5-441e-43d8-9144-09cad0fec740",
+		"name": "week-6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post-newPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwNTQwZjdlZTBmYWM4M2ZmM2FjMyIsIm5hbWUiOiJXZWxsIFlvbm5zIiwiaWF0IjoxNjUyODg1MDM1LCJleHAiOjE2NTM0ODk4MzV9._ubcO_bEcYqElTJ3C44daXHTmx0sXoB0-TLzkrfj57s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tags\": [\"吃飯\",\"洗澡\"],\r\n    \"type\": \"group\",\r\n    \"content\": \"新帳號\",\r\n    \"image\": \"https://images.unsplash.com/photo-1652260957608-927b3320c705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-sign-up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"廖太太\",\r\n    \"email\": \"59478ww1@gmail.cm\",\r\n    \"password\": \"fox00012\",\r\n    \"confirmPassword\": \"fox00012\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwNTQwZjdlZTBmYWM4M2ZmM2FjMyIsIm5hbWUiOiJXZWxsIFlvbm5zIiwiaWF0IjoxNjUyODg1MjU3LCJleHAiOjE2NTM0OTAwNTd9.ZX-sr6EMoaPJJ3wdTLXK2LVdrTFdXFhXZN8ig9hMsYM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch-editProfile",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwZTZlMmM5YzZmNDYzZWM1YmE1MyIsIm5hbWUiOiLlu5blpKrlpKoiLCJpYXQiOjE2NTI4ODcyMjAsImV4cCI6MTY1MzQ5MjAyMH0._TFGuYNECGGyUWTylp-C8q_EV4ip4yNVpq7AbMXgGJk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Emily 吳太太\",\r\n    \"email\": \"jump94po3@yahoo.com\",\r\n    \"photo\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/users/profile",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-updatePassword",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwNTQwZjdlZTBmYWM4M2ZmM2FjMyIsIm5hbWUiOiJXZWxsIFlvbm5zIiwiaWF0IjoxNjUyODg1MDM1LCJleHAiOjE2NTM0ODk4MzV9._ubcO_bEcYqElTJ3C44daXHTmx0sXoB0-TLzkrfj57s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"opop65999\",\r\n    \"confirmPassword\": \"opop65999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/users/updatePassword",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post-sign-in",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"59478ww1@gmail.cm\",\r\n    \"password\": \"fox00012\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-AllPosts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwNTQwZjdlZTBmYWM4M2ZmM2FjMyIsIm5hbWUiOiJXZWxsIFlvbm5zIiwiaWF0IjoxNjUyODg1MjU3LCJleHAiOjE2NTM0OTAwNTd9.ZX-sr6EMoaPJJ3wdTLXK2LVdrTFdXFhXZN8ig9hMsYM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-Post",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwNTQwZjdlZTBmYWM4M2ZmM2FjMyIsIm5hbWUiOiJXZWxsIFlvbm5zIiwiaWF0IjoxNjUyODg1MjU3LCJleHAiOjE2NTM0OTAwNTd9.ZX-sr6EMoaPJJ3wdTLXK2LVdrTFdXFhXZN8ig9hMsYM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/posts/627d108e7f6cbaebc24225f4",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"627d108e7f6cbaebc24225f4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwZTZlMmM5YzZmNDYzZWM1YmE1MyIsIm5hbWUiOiJFbWlseSDlkLPlpKrlpKoiLCJpYXQiOjE2NTI4ODczOTgsImV4cCI6MTY1MzQ5MjE5OH0.dM-Ov06gQp3dL63ieVeF5rU5ZT49CD550CCA1x3-rKM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tags\": [\"吃飯\",\"洗澡\",\"不睡\"],\r\n    \"type\": \"group\",\r\n    \"content\": \"吳太太上線了喔~~\",\r\n    \"image\": \"https://images.unsplash.com/photo-1517423568366-8b83523034fd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePost",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwZTZlMmM5YzZmNDYzZWM1YmE1MyIsIm5hbWUiOiJFbWlseSDlkLPlpKrlpKoiLCJpYXQiOjE2NTI4ODczOTgsImV4cCI6MTY1MzQ5MjE5OH0.dM-Ov06gQp3dL63ieVeF5rU5ZT49CD550CCA1x3-rKM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"group\",\r\n    \"content\": \"吳太太上線了喔!\",\r\n    \"image\": \"https://images.unsplash.com/photo-1529088363398-8efc64a0eb95?ixlib=rb-1.2.1&raw_url=true&q=60&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/posts/628510332c9c6f463ec5ba73",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"628510332c9c6f463ec5ba73"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletePost",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODUwNTQwZjdlZTBmYWM4M2ZmM2FjMyIsIm5hbWUiOiJXZWxsIFlvbm5zIiwiaWF0IjoxNjUyODg1MjU3LCJleHAiOjE2NTM0OTAwNTd9.ZX-sr6EMoaPJJ3wdTLXK2LVdrTFdXFhXZN8ig9hMsYM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://still-citadel-70561.herokuapp.com/api/posts/627685ece20749bfcd0be0e2",
+					"protocol": "https",
+					"host": [
+						"still-citadel-70561",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"627685ece20749bfcd0be0e2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
